@@ -1,0 +1,6 @@
+/home/chamith/Documents/ecommerce-microservices/inventory-service/src/main/java/com/ecommerce/inventoryservice/service/InventoryService.java
+/home/chamith/Documents/ecommerce-microservices/inventory-service/src/main/java/com/ecommerce/inventoryservice/model/Inventory.java
+/home/chamith/Documents/ecommerce-microservices/inventory-service/src/main/java/com/ecommerce/inventoryservice/dto/InventoryDTO.java
+/home/chamith/Documents/ecommerce-microservices/inventory-service/src/main/java/com/ecommerce/inventoryservice/repository/InventoryRepository.java
+/home/chamith/Documents/ecommerce-microservices/inventory-service/src/main/java/com/ecommerce/inventoryservice/controller/InventoryController.java
+/home/chamith/Documents/ecommerce-microservices/inventory-service/src/main/java/com/ecommerce/inventoryservice/InventoryServiceApplication.java

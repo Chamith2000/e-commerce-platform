@@ -1,0 +1,7 @@
+com/ecommerce/productservice/model/Product$Status.class
+com/ecommerce/productservice/dto/ProductDTO.class
+com/ecommerce/productservice/service/ProductService.class
+com/ecommerce/productservice/ProductServiceApplication.class
+com/ecommerce/productservice/repository/ProductRepository.class
+com/ecommerce/productservice/model/Product.class
+com/ecommerce/productservice/controller/ProductController.class

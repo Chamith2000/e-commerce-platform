@@ -1,0 +1,131 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+
+        # ── Product Service (8081) ──────────────────────────────────────────
+        - id: product-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/products/**
+
+        # ── Order Service (8082) ───────────────────────────────────────────
+        - id: order-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/orders/**
+
+        # ── Payment Service (8083) ─────────────────────────────────────────
+        - id: payment-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/payments/**
+
+        # ── Cart Service (8084) ────────────────────────────────────────────
+        - id: cart-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/cart/**
+
+        # ── Inventory Service (8085) ───────────────────────────────────────
+        - id: inventory-service
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/inventory/**
+
+        # ── Notification Service (8086) ────────────────────────────────────
+        - id: notification-service
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/notifications/**
+
+        # ── Swagger API Docs via Gateway ───────────────────────────────────
+        - id: product-service-docs
+          uri: http://localhost:8081
+          predicates:
+            - Path=/product-service/v3/api-docs/**
+          filters:
+            - RewritePath=/product-service/(?<segment>.*), /${segment}
+
+        - id: order-service-docs
+          uri: http://localhost:8082
+          predicates:
+            - Path=/order-service/v3/api-docs/**
+          filters:
+            - RewritePath=/order-service/(?<segment>.*), /${segment}
+
+        - id: payment-service-docs
+          uri: http://localhost:8083
+          predicates:
+            - Path=/payment-service/v3/api-docs/**
+          filters:
+            - RewritePath=/payment-service/(?<segment>.*), /${segment}
+
+        - id: cart-service-docs
+          uri: http://localhost:8084
+          predicates:
+            - Path=/cart-service/v3/api-docs/**
+          filters:
+            - RewritePath=/cart-service/(?<segment>.*), /${segment}
+
+        - id: inventory-service-docs
+          uri: http://localhost:8085
+          predicates:
+            - Path=/inventory-service/v3/api-docs/**
+          filters:
+            - RewritePath=/inventory-service/(?<segment>.*), /${segment}
+
+        - id: notification-service-docs
+          uri: http://localhost:8086
+          predicates:
+            - Path=/notification-service/v3/api-docs/**
+          filters:
+            - RewritePath=/notification-service/(?<segment>.*), /${segment}
+
+# ── SpringDoc / Swagger UI Aggregation ──────────────────────────────────────
+# Access unified Swagger UI at: http://localhost:9000/swagger-ui.html
+# Use the dropdown at top-right to switch between services
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - name: "1. Product Service"
+        url: /product-service/v3/api-docs
+      - name: "2. Order Service"
+        url: /order-service/v3/api-docs
+      - name: "3. Payment Service"
+        url: /payment-service/v3/api-docs
+      - name: "4. Cart Service"
+        url: /cart-service/v3/api-docs
+      - name: "5. Inventory Service"
+        url: /inventory-service/v3/api-docs
+      - name: "6. Notification Service"
+        url: /notification-service/v3/api-docs
+    urls-primary-name: "1. Product Service"
+    operationsSorter: method
+    tagsSorter: alpha
+    display-request-duration: true
+    disable-swagger-default-url: true
+  api-docs:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG

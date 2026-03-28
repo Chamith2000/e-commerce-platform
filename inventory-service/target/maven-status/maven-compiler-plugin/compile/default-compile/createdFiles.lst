@@ -1,0 +1,5 @@
+com/ecommerce/inventoryservice/controller/InventoryController.class
+com/ecommerce/inventoryservice/dto/InventoryDTO.class
+com/ecommerce/inventoryservice/InventoryServiceApplication.class
+com/ecommerce/inventoryservice/model/Inventory$StockStatus.class
+com/ecommerce/inventoryservice/model/Inventory.class
