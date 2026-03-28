@@ -1,7 +1,5 @@
 # 🛒 E-Commerce Microservices Architecture
 
-> **IT4020 – Modern Topics in IT | Assignment 2 | SLIIT 2026**
-
 A scalable e-commerce backend built using a microservices approach. Each service is independent, maintains its own database, and communicates through a unified API Gateway.
 
 ---
