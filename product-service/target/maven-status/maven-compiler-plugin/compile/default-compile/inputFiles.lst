@@ -1,6 +1,6 @@
-/home/chamith/Documents/ecommerce-microservices/product-service/src/main/java/com/ecommerce/productservice/model/Product.java
-/home/chamith/Documents/ecommerce-microservices/product-service/src/main/java/com/ecommerce/productservice/controller/ProductController.java
-/home/chamith/Documents/ecommerce-microservices/product-service/src/main/java/com/ecommerce/productservice/repository/ProductRepository.java
-/home/chamith/Documents/ecommerce-microservices/product-service/src/main/java/com/ecommerce/productservice/ProductServiceApplication.java
-/home/chamith/Documents/ecommerce-microservices/product-service/src/main/java/com/ecommerce/productservice/dto/ProductDTO.java
-/home/chamith/Documents/ecommerce-microservices/product-service/src/main/java/com/ecommerce/productservice/service/ProductService.java
+/home/chamith/Documents/e-commerce-platform/product-service/src/main/java/com/ecommerce/productservice/model/Product.java
+/home/chamith/Documents/e-commerce-platform/product-service/src/main/java/com/ecommerce/productservice/dto/ProductDTO.java
+/home/chamith/Documents/e-commerce-platform/product-service/src/main/java/com/ecommerce/productservice/repository/ProductRepository.java
+/home/chamith/Documents/e-commerce-platform/product-service/src/main/java/com/ecommerce/productservice/ProductServiceApplication.java
+/home/chamith/Documents/e-commerce-platform/product-service/src/main/java/com/ecommerce/productservice/controller/ProductController.java
+/home/chamith/Documents/e-commerce-platform/product-service/src/main/java/com/ecommerce/productservice/service/ProductService.java
